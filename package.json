@@ -1,0 +1,33 @@
+{
+  "name": "riffforge",
+  "version": "1.0.0",
+  "description": "Procedural guitar riff and solo generator with a learnable style model",
+  "main": "main.js",
+  "author": {
+    "name": "RiffForge",
+    "email": "riffforge@example.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --publish never"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.riffforge.app",
+    "productName": "RiffForge",
+    "files": [
+      "main.js",
+      "src/**"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    }
+  }
+}
